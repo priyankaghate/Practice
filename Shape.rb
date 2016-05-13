@@ -7,6 +7,8 @@ end
 def area()
  	print "Area of #{s} is="
  end 
+ def perimeter()
+ 	print "Perimeter of #{s} is="
 end
 class Circle < Shape
 	attr_accessor :rad
@@ -17,6 +19,10 @@ class Circle < Shape
 		super()
 
 		print "#{3.14*rad*rad}"
+	end
+	def perimeter()
+		super()
+		print "#{2*3.14*rad}"
 	end
 end
 class Rectangle < Shape
@@ -29,12 +35,14 @@ class Rectangle < Shape
 
 		print "#{length*width}"
 	end
+	
 end
 
 circle=Circle.new("Circle")
 puts "Enter the radious of circle=>"
 circle.rad=gets.to_f()
 circle.area
+circle.perimeter
 rect=Rectangle.new("Rectangle")
 puts "Enter the length of Rectangle=>"
 rect.length=gets.to_f()
