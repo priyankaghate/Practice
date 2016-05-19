@@ -1,5 +1,8 @@
 class Factorial
   attr_accessor :num, :fact, :lines
+  def method_missing(n,*a,&b)
+    puts "\"#{n}\" this method is not defined in #{self.class} class."
+  end
   def read
    	@lines=File.readlines("Input.txt") 
   end
@@ -21,4 +24,4 @@ end
 fact=Factorial.new
 fact.read
 fact.calculate_fact
-
+#fact.demo
