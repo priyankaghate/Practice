@@ -11,7 +11,7 @@ class Factorial
     @lines.each do |line|
       line.scan(@num) do |n|
         @fact=1
-        print"Factorial of #{n}="
+        print" The Factorial of #{n} is ="
         while(n.to_i>0)
           @fact*=n.to_i
           n=n.to_i-1
